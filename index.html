@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مطعم الذواقة</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf5;
+      color: #222;
+      direction: rtl;
+    }
+    header {
+      background-color: #a00000;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+      position: relative;
+      height: 300px;
+    }
+    .hero .overlay {
+      background-color: rgba(0,0,0,0.5);
+      color: white;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .menu-item {
+      background-color: #ffe8d6;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    blockquote {
+      background-color: #f5f5f5;
+      border-right: 5px solid #a00000;
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 500px;
+      font-style: italic;
+      text-align: right;
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+    input, button {
+      padding: 0.6rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #a00000;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 100%;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      .menu-item {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-utensils"></i> مطعم الذواقة</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">قائمة الطعام</a></li>
+        <li><a href="#gallery">الصور</a></li>
+        <li><a href="#testimonials">آراء الزبائن</a></li>
+        <li><a href="#reservation">حجز طاولة</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="overlay">
+      <h2>أشهى الأطباق وأجمل الأجواء</h2>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <h2><i class="fa-solid fa-list"></i> قائمة الطعام</h2>
+    <div class="menu-grid">
+      <div class="menu-item"><h3>🍛 كبسة لحم</h3><p>50 ريال</p></div>
+      <div class="menu-item"><h3>🍗 دجاج مشوي</h3><p>45 ريال</p></div>
+      <div class="menu-item"><h3>🥘 مقلوبة</h3><p>48 ريال</p></div>
+      <div class="menu-item"><h3>🍲 فتة شاورما</h3><p>40 ريال</p></div>
+      <div class="menu-item"><h3>🍤 جمبري مقلي</h3><p>60 ريال</p></div>
+      <div class="menu-item"><h3>🍕 بيتزا خضار</h3><p>35 ريال</p></div>
+      <div class="menu-item"><h3>🥙 شاورما لحم</h3><p>25 ريال</p></div>
+      <div class="menu-item"><h3>🍝 مكرونة بشاميل</h3><p>38 ريال</p></div>
+      <div class="menu-item"><h3>🍗 بروستد دجاج</h3><p>42 ريال</p></div>
+      <div class="menu-item"><h3>🍚 أرز بخاري</h3><p>30 ريال</p></div>
+      <div class="menu-item"><h3>🥗 سلطة فتوش</h3><p>15 ريال</p></div>
+      <div class="menu-item"><h3>🍛 برياني دجاج</h3><p>48 ريال</p></div>
+      <div class="menu-item"><h3>🍖 لحم مشوي</h3><p>65 ريال</p></div>
+      <div class="menu-item"><h3>🥣 شوربة عدس</h3><p>20 ريال</p></div>
+      <div class="menu-item"><h3>🍢 كبة مقلية</h3><p>25 ريال</p></div>
+      <div class="menu-item"><h3>🍞 خبز بالثوم</h3><p>10 ريال</p></div>
+      <div class="menu-item"><h3>🧆 فلافل</h3><p>12 ريال</p></div>
+      <div class="menu-item"><h3>🥪 ساندويتش كرسبي</h3><p>28 ريال</p></div>
+      <div class="menu-item"><h3>🧀 أصابع جبن</h3><p>18 ريال</p></div>
+      <div class="menu-item"><h3>🍟 بطاطس مقلية</h3><p>12 ريال</p></div>
+      <div class="menu-item"><h3>🍨 آيس كريم</h3><p>10 ريال</p></div>
+      <div class="menu-item"><h3>🍰 كيكة شوكولا</h3><p>15 ريال</p></div>
+      <div class="menu-item"><h3>☕ قهوة تركية</h3><p>8 ريال</p></div>
+      <div class="menu-item"><h3>🍹 عصير طبيعي</h3><p>14 ريال</p></div>
+      <div class="menu-item"><h3>🥤 بيبسي</h3><p>5 ريال</p></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="section">
+    <h2><i class="fa-solid fa-image"></i> صور من المطعم</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/300x200" alt="صورة 1">
+      <img src="https://via.placeholder.com/300x200" alt="صورة 2">
+      <img src="https://via.placeholder.com/300x200" alt="صورة 3">
+    </div>
+  </section>
+
+  <section id="testimonials" class="section">
+    <h2><i class="fa-solid fa-comments"></i> آراء الزبائن</h2>
+    <blockquote>"أفضل مطعم جربته. الأكل لذيذ جدًا. – <strong>أحمد</strong>"</blockquote>
+    <blockquote>"جلسات راقية وأجواء هادئة. أنصح به بشدة. – <strong>فاطمة</strong>"</blockquote>
+  </section>
+
+  <section id="reservation" class="section">
+    <h2><i class="fa-solid fa-calendar-check"></i> احجز طاولتك</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <label for="name">الاسم:</label>
+      <input type="text" name="name" required>
+      <label for="phone">رقم الجوال:</label>
+      <input type="tel" name="phone" required>
+      <label for="date">التاريخ:</label>
+      <input type="date" name="date" required>
+      <label for="people">عدد الأشخاص:</label>
+      <input type="number" name="people" min="1" max="20" required>
+      <button type="submit">إرسال الحجز</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 مطعم الذواقة - جميع الحقوق محفوظة</p>
+  </footer>
+</body>
+</html>
